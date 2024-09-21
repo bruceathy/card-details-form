@@ -22,11 +22,20 @@
       />
       <div class="cards">
         <div class="card-front">
-          0000 0000 0000 0000 Jane Appleseed 00/00 000
+          <img src="./images/card-logo.svg" alt="card logo" class="card-logo" />
+          <p class="card-number" id="card-number">0000 0000 0000 0000</p>
+          <div class="card-info">
+            <p>Jane Appleseed</p>
+            <p>00/00</p>
+          </div>
         </div>
-        <img src="./images/bg-card-back.png" alt="card back" />
+        <img
+          src="./images/bg-card-back.png"
+          alt="card back"
+          class="card-back"
+        />
       </div>
-      <form class="card-form">
+      <form class="card-form" id="card-form">
         <label for="name">Cardholder Name</label>
         <input
           type="text"
@@ -53,18 +62,18 @@
           </div>
         </div>
 
-        <button type="submit" class="submit-btn">Confirm</button>
+        <button type="submit" class="btn" id="submit">Confirm</button>
       </form>
+      <div class="thank-you hidden" id="thank-you">
+        <img
+          src="./images/icon-complete.svg"
+          alt="icon complete"
+          class="thank-you-icon"
+        />
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button class="btn" id="continue">Continue</button>
+      </div>
     </main>
-
-    <!-- Completed state start -->
-    <div>Thank you! We've added your card details Continue</div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 </html>
