@@ -1,7 +1,9 @@
 const cardForm = document.getElementById("card-form");
 const submitBtn = document.getElementById("submit");
 const thankYou = document.getElementById("thank-you");
-const cardNumber = document.getElementById("card-number");
+const cardNumber = document.getElementById("number");
+const cardName = document.getElementById("card-name");
+const cardExp = document.getElementById("card-exp");
 const continueBtn = document.getElementById("continue");
 
 submitBtn.addEventListener("click", (e) => {

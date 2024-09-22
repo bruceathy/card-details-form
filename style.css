@@ -11,7 +11,8 @@ body {
   overscroll-behavior: none;
 }
 
-input {
+input,
+select {
   padding: 0.5rem 0.3rem;
   margin-bottom: 0.3rem;
   border: none;
@@ -20,6 +21,13 @@ input {
   border-radius: 0.3rem;
   font-size: 1.1rem;
   font-family: "Space Grotesk", monospace;
+}
+
+select {
+  display: inline;
+  width: 48%;
+  height: 2.4rem;
+  margin-bottom: 0;
 }
 
 input:focus {
@@ -123,12 +131,7 @@ main img {
 .date-cvc {
   display: flex;
   justify-content: space-between;
-}
-
-.date input {
-  display: inline;
-  width: 45%;
-  margin-bottom: 0;
+  align-items: center;
 }
 
 .cvc input {
@@ -144,6 +147,7 @@ main img {
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 
 .thank-you {
