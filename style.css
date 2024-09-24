@@ -14,7 +14,6 @@ body {
 input,
 select {
   padding: 0.5rem 0.3rem;
-  margin-bottom: 0.3rem;
   border: none;
   background-color: #0000007e;
   color: #f6f6f6;
@@ -27,7 +26,6 @@ select {
   display: inline;
   width: 48%;
   height: 2.4rem;
-  margin-bottom: 0;
 }
 
 input:focus {
@@ -83,6 +81,11 @@ main img {
   box-shadow: 5px 5px 10px #00000088;
 }
 
+.error {
+  color: #ab0000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .card-front {
   position: relative;
   top: 10rem;
@@ -128,10 +131,17 @@ main img {
   background-color: #fff2e1;
 }
 
+.sec {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+}
+
 .date-cvc {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .cvc input {
