@@ -9,8 +9,11 @@ const expireMonth = document.getElementById("exp-month");
 const expireMonthError = document.getElementById("date-error");
 const expireYear = document.getElementById("exp-year");
 const expireYearError = document.getElementById("date-error");
+const cvc = document.getElementById("cvc");
+const cvcError = document.getElementById("cvc-error");
 const continueBtn = document.getElementById("continue");
 
+// create an error message for each if statement and append it to the form
 function cardNameValidation() {
   if (cardName.value === "") {
     cardNameError.classList.remove("hidden");
@@ -45,12 +48,21 @@ function expireYearValidation() {
   }
 }
 
+function cvcValidation() {
+  if (cvc.value === "") {
+    cvcError.classList.remove("hidden");
+  } else {
+    return true;
+  }
+}
+
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  // cardNameValidation();
-  // cardNumberValidation();
-  // expireMonthValidation();
-  // expireYearValidation();
+  cardNameValidation();
+  cardNumberValidation();
+  expireMonthValidation();
+  expireYearValidation();
+  cvcValidation();
   cardForm.classList.add("hidden");
   thankYou.classList.remove("hidden");
 });
