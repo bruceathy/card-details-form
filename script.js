@@ -13,58 +13,22 @@ const cvc = document.getElementById("cvc");
 const cvcError = document.getElementById("cvc-error");
 const continueBtn = document.getElementById("continue");
 
-// create an error message for each if statement and append it to the form
-function cardNameValidation() {
-  if (cardName.value === "") {
-    cardNameError.classList.remove("hidden");
-  } else {
-    return true;
-  }
-}
-
-function cardNumberValidation() {
-  if (cardNumber.value === "") {
-    cardNumberError.classList.remove("hidden");
-  } else if (cardNumber.value.length < 16 || cardNumber.value.length > 16) {
-    cardNumberError.classList.remove("hidden");
-  } else {
-    return;
-  }
-}
-
-function expireMonthValidation() {
-  if (expireMonth.value === "") {
-    expireMonthError.classList.remove("hidden");
-  } else {
-    return true;
-  }
-}
-
-function expireYearValidation() {
-  if (expireYear.value === "") {
-    expireYearError.classList.remove("hidden");
-  } else {
-    return true;
-  }
-}
-
-function cvcValidation() {
-  if (cvc.value === "") {
-    cvcError.classList.remove("hidden");
-  } else {
-    return true;
-  }
-}
-
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  cardNameValidation();
-  cardNumberValidation();
-  expireMonthValidation();
-  expireYearValidation();
-  cvcValidation();
-  cardForm.classList.add("hidden");
-  thankYou.classList.remove("hidden");
+  if (cardNumber.value === "") {
+    cardNumberError.classList.remove("hidden");
+  } else if (cardName.value === "") {
+    cardNameError.classList.remove("hidden");
+  } else if (expireMonth.value === "") {
+    expireMonthError.classList.remove("hidden");
+  } else if (expireYear.value === "") {
+    expireYearError.classList.remove("hidden");
+  } else if (cvc.value === "") {
+    cvcError.classList.remove("hidden");
+  } else {
+    cardForm.classList.add("hidden");
+    thankYou.classList.remove("hidden");
+  }
 });
 
 continueBtn.addEventListener("click", (e) => {
