@@ -26,6 +26,7 @@ submitBtn.addEventListener("click", (e) => {
   } else if (cvc.value === "") {
     cvcError.classList.remove("hidden");
   } else {
+    cardForm.reset();
     cardForm.classList.add("hidden");
     thankYou.classList.remove("hidden");
   }
@@ -33,6 +34,7 @@ submitBtn.addEventListener("click", (e) => {
 
 continueBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  cardForm.reset();
   thankYou.classList.add("hidden");
   cardForm.classList.remove("hidden");
 });
