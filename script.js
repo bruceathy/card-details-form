@@ -30,6 +30,11 @@ submitBtn.addEventListener("click", (e) => {
     cardForm.classList.add("hidden");
     thankYou.classList.remove("hidden");
   }
+
+  if (cardNumber.value !== "" && cardName.value !== "") {
+    cardNumberError.classList.add("hidden");
+    cardNameError.classList.add("hidden");
+  }
 });
 
 continueBtn.addEventListener("click", (e) => {
