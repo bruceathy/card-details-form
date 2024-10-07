@@ -17,19 +17,21 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (cardNumber.value === "") {
     cardNumberError.classList.remove("hidden");
-  } else if (cardName.value === "") {
-    cardNameError.classList.remove("hidden");
-  } else if (expireMonth.value === "") {
-    expireMonthError.classList.remove("hidden");
-  } else if (expireYear.value === "") {
-    expireYearError.classList.remove("hidden");
-  } else if (cvc.value === "") {
-    cvcError.classList.remove("hidden");
-  } else {
-    cardForm.reset();
-    cardForm.classList.add("hidden");
-    thankYou.classList.remove("hidden");
   }
+  if (cardName.value === "") {
+    cardNameError.classList.remove("hidden");
+  }
+  if (expireMonth.value === "") {
+    expireMonthError.classList.remove("hidden");
+  }
+  if (expireYear.value === "") {
+    expireYearError.classList.remove("hidden");
+  }
+  if (cvc.value === "") {
+    cvcError.classList.remove("hidden");
+  }
+  // cardForm.classList.add("hidden");
+  // thankYou.classList.remove("hidden");
 });
 
 continueBtn.addEventListener("click", (e) => {
